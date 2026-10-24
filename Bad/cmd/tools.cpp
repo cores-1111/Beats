@@ -108,7 +108,7 @@ void update_timer(int length = 10, int sleep = 12) {
                 int remaining = std::max(duration - played, 0);
                 int pos = std::min(static_cast<int>(static_cast<double>(played) / duration * length), length - 1);
                 std::string timer;
-                for (int i = 0; i < length; ++i) timer += (i == pos) ? "◉" : "—";
+                for (int i = 0; i < length; ++i) timer += (i == pos) ? "𖹭" : "—";
 
                 if (remaining <= 30) {
                     auto next = queue().get_next(chat, true);
